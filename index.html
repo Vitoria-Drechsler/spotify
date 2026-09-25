@@ -21,6 +21,90 @@
   </header>
 
   <main class="conteudo">
+    <section class="cartao" aria-labelledby="titulo-login">
+      <h1 id="titulo-login" class="cartao__titulo">Entrar no Spotify</h1>
+
+      <nav class="login-social" aria-label="Outras formas de entrar">
+        <ul>
+          <li>
+            <a href="#" class="botao-social">
+              <img src="imagens/icone-google.svg" alt="Ícone do Google" class="botao-social__icone">
+              Continuar com Google
+            </a>
+          </li>
+          <li>
+            <a href="#" class="botao-social">
+              <img src="imagens/icone-facebook.svg" alt="Ícone do Facebook" class="botao-social__icone">
+              Continuar com Facebook
+            </a>
+          </li>
+          <li>
+            <a href="#" class="botao-social">
+              <img src="imagens/icone-apple.svg" alt="Ícone da Apple" class="botao-social__icone">
+              Continuar com Apple
+            </a>
+          </li>
+          <li>
+            <a href="#" class="botao-social">
+              <img src="imagens/icone-telefone.svg" alt="Ícone de telefone" class="botao-social__icone">
+              Continuar com um número de telefone
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <hr class="divisor">
+
+      <form class="formulario" id="form-login" action="#" method="post" novalidate>
+
+        <div class="campo">
+          <label for="usuario">E-mail ou nome de usuário</label>
+          <input type="text" id="usuario" name="usuario" placeholder="E-mail ou nome de usuário"
+                 autocomplete="username" required aria-describedby="erro-usuario">
+          <p class="campo__erro" id="erro-usuario"></p>
+        </div>
+
+        <div class="campo">
+          <label for="senha">Senha</label>
+          <div class="campo__senha">
+            <input type="password" id="senha" name="senha" placeholder="Senha"
+                   autocomplete="current-password" required aria-describedby="erro-senha">
+            <button type="button" class="mostrar-senha" id="mostrar-senha"
+                    aria-label="Mostrar senha" aria-controls="senha" aria-pressed="false">
+              <svg class="mostrar-senha__oculta" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                <path d="M3 3l18 18M10.6 10.6a2 2 0 002.8 2.8M9.9 5.2A10.4 10.4 0 0112 5c5 0 8.7 3.6 10 7-.5 1.3-1.3 2.6-2.3 3.7M6.3 6.3C4.3 7.6 2.8 9.6 2 12c1.3 3.4 5 7 10 7 1.7 0 3.3-.4 4.7-1.1"
+                      fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+              <svg class="mostrar-senha__visivel" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                <path d="M2 12c1.3-3.4 5-7 10-7s8.7 3.6 10 7c-1.3 3.4-5 7-10 7S3.3 15.4 2 12z"
+                      fill="none" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+            </button>
+          </div>
+          <p class="campo__erro" id="erro-senha"></p>
+        </div>
+
+        <div class="lembrar">
+          <input type="checkbox" id="lembrar" name="lembrar" class="interruptor" role="switch" checked>
+          <label for="lembrar">Lembrar de mim</label>
+        </div>
+
+        <button type="submit" class="botao-entrar">Entrar</button>
+
+        <p class="formulario__status" id="status-form" role="status" aria-live="polite"></p>
+      </form>
+
+      <a href="#" class="link-esqueceu">Esqueceu sua senha?</a>
+
+      <hr class="divisor">
+
+      <p class="cadastro">
+        Não tem uma conta?
+        <a href="#" class="cadastro__link">Inscrever-se no Spotify</a>
+      </p>
+    </section>
+
 
   </main>
 
