@@ -82,3 +82,80 @@ button:focus-visible {
   width: 36px;
   height: 36px;
 }
+
+/* ---------- 4. CONTEÚDO PRINCIPAL ---------- */
+.conteudo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(var(--espaco) * 4);
+  padding: 0 calc(var(--espaco) * 3) calc(var(--espaco) * 4);
+}
+
+/* no celular o "cartão" não tem fundo próprio: ocupa a tela inteira */
+.cartao {
+  width: 100%;
+  max-width: var(--largura-formulario);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cartao__titulo {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;     /* títulos do Spotify são bem "apertados" */
+  line-height: 1.15;
+  text-align: center;
+  margin: calc(var(--espaco) * 3) 0 calc(var(--espaco) * 4);
+}
+
+/* ---------- 5. BOTÕES DE LOGIN SOCIAL ---------- */
+.login-social {
+  width: 100%;
+}
+
+/* seletor descendente: só as listas que estão dentro de .login-social */
+.login-social ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco);
+}
+
+.botao-social {
+  position: relative;          /* referência para o ícone posicionado */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--altura-botao);
+  padding: var(--espaco) calc(var(--espaco) * 6);   /* espaço lateral para o ícone não encostar no texto */
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-pilula);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.2;
+  transition: border-color 0.2s;
+}
+
+/* ícone fica "preso" à esquerda enquanto o texto continua centralizado, igual ao original */
+.botao-social__icone {
+  position: absolute;
+  left: calc(var(--espaco) * 3);
+  width: 24px;
+  height: 24px;
+}
+
+/* pseudo-classe :hover -> borda clareia ao passar o mouse */
+.botao-social:hover {
+  border-color: var(--cor-texto);
+}
+
+/* ---------- 6. DIVISOR ---------- */
+.divisor {
+  width: 100%;
+  border: none;
+  border-top: 1px solid var(--cor-divisor);
+  margin: calc(var(--espaco) * 4) 0;
+}
