@@ -159,3 +159,105 @@ button:focus-visible {
   border-top: 1px solid var(--cor-divisor);
   margin: calc(var(--espaco) * 4) 0;
 }
+
+/* ---------- 7. FORMULÁRIO ---------- */
+.formulario {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--espaco) * 2);
+}
+
+/* seletor de filho direto (>): só o label que é filho imediato de .campo */
+.campo > label {
+  display: block;
+  font-size: var(--texto-pequeno);
+  font-weight: 700;
+  margin-bottom: var(--espaco);
+}
+
+/* seletor de atributo: estiliza só os campos de texto e senha */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  min-height: var(--altura-botao);
+  padding: 14px;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: inherit;
+  font-size: var(--texto-base);
+  border: none;
+  border-radius: 4px;
+  /* borda feita com box-shadow para poder "engrossar" no foco sem mexer no tamanho do campo */
+  box-shadow: inset 0 0 0 1px var(--cor-borda);
+  transition: box-shadow 0.2s;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: var(--cor-texto-secundario);
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover {
+  box-shadow: inset 0 0 0 1px var(--cor-texto);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 3px var(--cor-texto);
+}
+
+/* campo com erro (atributo definido pelo JavaScript) */
+input[aria-invalid="true"] {
+  box-shadow: inset 0 0 0 1px var(--cor-erro);
+}
+
+.campo__erro {
+  color: var(--cor-erro);
+  font-size: var(--texto-pequeno);
+}
+
+.campo__erro:empty {
+  display: none;               /* não ocupa espaço enquanto não há erro */
+}
+
+.campo__erro:not(:empty) {
+  margin-top: var(--espaco);
+}
+
+/* campo de senha: o botão do "olho" fica por cima do input, à direita */
+.campo__senha {
+  position: relative;
+}
+
+.campo__senha input {
+  padding-right: 52px;         /* reserva espaço para o botão não cobrir o texto */
+}
+
+.mostrar-senha {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  display: flex;
+  background: none;
+  border: none;
+  color: var(--cor-texto-secundario);
+  cursor: pointer;
+}
+
+.mostrar-senha:hover {
+  color: var(--cor-texto);
+}
+
+/* por padrão mostra o olho fechado; quando aria-pressed="true", troca pelo olho aberto */
+.mostrar-senha__visivel,
+.mostrar-senha[aria-pressed="true"] .mostrar-senha__oculta {
+  display: none;
+}
+
+.mostrar-senha[aria-pressed="true"] .mostrar-senha__visivel {
+  display: block;
+}
