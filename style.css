@@ -261,3 +261,116 @@ input[aria-invalid="true"] {
 .mostrar-senha[aria-pressed="true"] .mostrar-senha__visivel {
   display: block;
 }
+
+/* ---------- 8. INTERRUPTOR "LEMBRAR DE MIM" ---------- */
+.lembrar {
+  display: flex;
+  align-items: center;
+}
+
+/* o checkbox real fica invisível, mas continua acessível ao teclado e leitor de tela */
+.interruptor {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.lembrar label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: var(--texto-pequeno);
+  cursor: pointer;
+}
+
+/* pseudo-elemento ::before = trilho do interruptor */
+.lembrar label::before {
+  content: "";
+  width: 34px;
+  height: 20px;
+  border-radius: var(--raio-pilula);
+  background-color: var(--cor-borda);
+  transition: background-color 0.2s;
+}
+
+/* pseudo-elemento ::after = bolinha do interruptor */
+.lembrar label::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--cor-fundo);
+  transition: transform 0.2s;
+}
+
+/* combinador de irmão adjacente (+) com pseudo-classe :checked */
+.interruptor:checked + label::before {
+  background-color: var(--cor-verde);
+}
+
+.interruptor:checked + label::after {
+  transform: translateX(14px);
+}
+
+.interruptor:focus-visible + label::before {
+  outline: 3px solid var(--cor-texto);
+  outline-offset: 2px;
+}
+
+/* ---------- 9. BOTÃO ENTRAR ---------- */
+.botao-entrar {
+  width: 100%;
+  min-height: var(--altura-botao);
+  margin-top: calc(var(--espaco) * 2);
+  padding: var(--espaco) calc(var(--espaco) * 4);
+  background-color: var(--cor-verde);
+  color: #000000;
+  font-family: inherit;
+  font-size: var(--texto-base);
+  font-weight: 700;
+  border: none;
+  border-radius: var(--raio-pilula);
+  cursor: pointer;
+  transition: transform 0.1s, background-color 0.1s;
+}
+
+/* no original o botão "cresce" um pouco no hover */
+.botao-entrar:hover {
+  background-color: var(--cor-verde-hover);
+  transform: scale(1.04);
+}
+
+.botao-entrar:active {
+  transform: scale(1);
+}
+
+.formulario__status {
+  font-size: var(--texto-pequeno);
+  color: var(--cor-verde);
+  text-align: center;
+}
+
+/* ---------- 10. LINKS FINAIS ---------- */
+.link-esqueceu {
+  margin-top: calc(var(--espaco) * 4);
+  font-weight: 500;
+}
+
+.link-esqueceu:hover,
+.cadastro__link:hover {
+  color: var(--cor-verde);
+}
+
+.cadastro {
+  color: var(--cor-texto-secundario);
+  text-align: center;
+}
+
+.cadastro__link {
+  display: inline-block;
+  font-weight: 500;
+}
