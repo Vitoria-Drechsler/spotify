@@ -374,3 +374,65 @@ input[aria-invalid="true"] {
   display: inline-block;
   font-weight: 500;
 }
+
+/* ---------- 11. PERSONALIZAÇÃO: "SOBRE ESTE CLONE" ---------- */
+.sobre-clone {
+  width: 100%;
+  max-width: var(--largura-formulario);
+  padding: calc(var(--espaco) * 3);
+  border: 1px dashed var(--cor-divisor);   /* tracejado deixa claro que é um "extra" do clone */
+  border-radius: 8px;
+}
+
+.sobre-clone__titulo {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: var(--espaco);
+}
+
+.sobre-clone__texto,
+.sobre-clone__disciplina {
+  color: var(--cor-texto-secundario);
+  font-size: var(--texto-pequeno);
+}
+
+/* CSS Grid: no celular uma coluna; na media query vira duas */
+.sobre-clone__dupla {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaco);
+  margin: calc(var(--espaco) * 2) 0;
+}
+
+.integrante {
+  padding: 12px calc(var(--espaco) * 2);
+  background-color: var(--cor-divisor);
+  border-left: 3px solid var(--cor-verde);
+  border-radius: 4px;
+}
+
+.integrante__nome {
+  font-weight: 700;
+}
+
+.integrante__info {
+  font-size: var(--texto-pequeno);
+  color: var(--cor-texto-secundario);
+}
+
+/* ---------- 12. RODAPÉ ---------- */
+.rodape {
+  padding: calc(var(--espaco) * 3);
+  color: var(--cor-texto-secundario);
+  font-size: 0.6875rem;        /* 11px, texto legal bem pequeno como no original */
+  text-align: center;
+}
+
+.rodape a {
+  color: var(--cor-texto-secundario);
+}
+
+.rodape a:hover {
+  color: var(--cor-texto);
+}
+
