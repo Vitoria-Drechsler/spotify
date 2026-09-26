@@ -436,3 +436,69 @@ input[aria-invalid="true"] {
   color: var(--cor-texto);
 }
 
+/* =========================================================
+   MEDIA QUERY - telas a partir de 768px (tablet/desktop)
+   ========================================================= */
+@media (min-width: 768px) {
+
+  /* no desktop o fundo ganha o degradê e o logo vai para uma faixa preta à esquerda */
+  body {
+    /* branco com 10% de opacidade sobre o preto gera um cinza bem escuro que "some" até o preto */
+    background-color: var(--cor-fundo-topo);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1) 0%, var(--cor-fundo-topo) 100%);
+    background-attachment: fixed;
+  }
+
+  .topo {
+    justify-content: flex-start;
+    background-color: var(--cor-fundo-topo);
+    padding: calc(var(--espaco) * 4) 52px;
+  }
+
+  .topo__logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .conteudo {
+    padding: calc(var(--espaco) * 4) calc(var(--espaco) * 4) calc(var(--espaco) * 6);
+  }
+
+  /* o conteúdo vira um cartão escuro e largo; o formulário continua estreito dentro dele */
+  .cartao {
+    max-width: 734px;
+    padding: calc(var(--espaco) * 4) 0 calc(var(--espaco) * 6);
+    background-color: var(--cor-fundo);
+    border-radius: 8px;
+  }
+
+  .cartao__titulo {
+    font-size: 3rem;
+    margin: calc(var(--espaco) * 4) 0 calc(var(--espaco) * 5);
+  }
+
+  /* a lista social, o formulário e os divisores ficam na largura do original (324px) */
+  .login-social,
+  .formulario {
+    max-width: var(--largura-formulario);
+  }
+
+  .divisor {
+    width: calc(100% - 200px); /* no desktop o divisor é mais largo que o formulário, mas não encosta na borda */
+  }
+
+  .sobre-clone {
+    max-width: 734px;
+  }
+
+  .sobre-clone__dupla {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* respeita quem prefere menos animação */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
