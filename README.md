@@ -161,6 +161,7 @@ O formulário da página original, na versão atual, pede só o e-mail na primei
 - 27/09 | Carol | HTML e CSS: adapta o clone à nova tela "Olá de novo" do Spotify |
 - 27/09 | Carol | README final |
 - 28/09 | Vitória | Commit final: implementação dos prints |
+- 28/09 | Vitória | Github pages |
 
 Commits feitos em 5 dias diferentes (24, 25, 26, 27 e 28/09), com `index.html` e `style.css` na raiz do repositório.
 
@@ -293,3 +294,10 @@ Domingo · 27/09 · Carol
 Segunda-feira · 28/09 · Vitória
 
 **O que foi feito:** Adicionados os prints comparando o clone com o original no desktop e no celular.
+
+## Commit 12 — Github-pages
+
+Segunda-feira · 28/09 · Vitória
+
+**O que foi feito:** Criado o Github pages
+<https://vitoria-drechsler.github.io/spotify/>
