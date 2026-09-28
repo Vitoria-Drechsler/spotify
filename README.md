@@ -46,7 +46,7 @@ Para ver a página, basta abrir o `index.html` no navegador.
 
 | Original | Clone |
 |---|---|
-| ![Página original no celular](prints/original-celular.png) | ![Clone no celular](prints/clone-celular.png) |
+| ![Página original no celular](prints/original-celular.jpeg) | ![Clone no celular](prints/clone-celular.jpeg) |
 
 ---
 
@@ -148,21 +148,21 @@ O formulário da página original, na versão atual, pede só o e-mail na primei
 
 ## Histórico de commits
 
-24/09 | Vitória | Initial commit |
-24/09 | Vitória | Add files via upload |
-24/09 | Vitória | Criei a estrutura base do projeto com o semântico do HTML e o início do style |
-25/09 | Vitória | Adicionei comandos / funções da tela inicial do site |
-25/09 | Carol | Adicionadas as imagens, começo do CSS e foi criado o README com o relatório |
-25/09 | Carol | Ajuste do layout principal, título e os botões de login |
-25/09 | Carol | Ajustes no campo de formulário e botão de mostrar senha |
-25/09 | Vitória | Criado o interruptor de lembrar de mim, estilizado o botão Entrar e os links finais |
-26/09 | Vitória | Adicionei a seção "clone acadêmico" e estilizei o rodapé |
-26/09 | Vitória | Ajustei o layout para telas maiores com media query min-width: 768px |
-27/09 | Carol | HTML e CSS: adapta o clone à nova tela "Olá de novo" do Spotify |
-27/09 | Carol | README final |
-28/09 | Vitória | Commit final: implementação dos prints |
+- 24/09 | Vitória | Initial commit |
+- 24/09 | Vitória | Add files via upload |
+- 24/09 | Vitória | Criei a estrutura base do projeto com o semântico do HTML e o início do style |
+- 25/09 | Vitória | Adicionei comandos / funções da tela inicial do site |
+- 25/09 | Carol | Adicionadas as imagens, começo do CSS e foi criado o README com o relatório |
+- 25/09 | Carol | Ajuste do layout principal, título e os botões de login |
+- 25/09 | Carol | Ajustes no campo de formulário e botão de mostrar senha |
+- 25/09 | Vitória | Criado o interruptor de lembrar de mim, estilizado o botão Entrar e os links finais |
+- 26/09 | Vitória | Adicionei a seção "clone acadêmico" e estilizei o rodapé |
+- 26/09 | Vitória | Ajustei o layout para telas maiores com media query min-width: 768px |
+- 27/09 | Carol | HTML e CSS: adapta o clone à nova tela "Olá de novo" do Spotify |
+- 27/09 | Carol | README final |
+- 28/09 | Vitória | Commit final: implementação dos prints |
 
-Commits feitos em 4 dias diferentes (24, 25, 26 e 27/09), com `index.html` e `style.css` na raiz do repositório.
+Commits feitos em 5 dias diferentes (24, 25, 26, 27 e 28/09), com `index.html` e `style.css` na raiz do repositório.
 
 ---
 
